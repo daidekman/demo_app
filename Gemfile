@@ -5,7 +5,8 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#Testing commenting this out for heroku upload
+#gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -37,6 +38,7 @@ group :production, :staging do
 gem "pg"
 end
 
-group :development, :test do
-gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-end
+#This was also in Stackoverflow db fix but did not work
+#group :development, :test do
+#gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+#end
