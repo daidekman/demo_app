@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-#Testing commenting this out for heroku upload
+#Testing commenting this out for heroku upload, also see line 46
 #gem 'sqlite3'
 
 
@@ -33,6 +33,10 @@ group :test do
   gem 'turn', :require => false
 end
 
-#This is the devcenter.heroku.com/articles/bundler fix
-#gem "pg", :group => :production
+#This is the devcenter.heroku.com/articles/bundler fix combined with StackOverflow
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
+
 gem "sqlite3-ruby", :group => :development
