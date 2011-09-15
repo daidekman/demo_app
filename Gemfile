@@ -33,12 +33,6 @@ group :test do
   gem 'turn', :require => false
 end
 
-#Railstutorial StackOverflow fix for db migration issues
-group :production, :staging do
-gem "pg"
-end
-
-#This was also in Stackoverflow db fix but did not work
-#group :development, :test do
-#gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-#end
+#This is the devcenter.heroku.com/articles/bundler fix
+#gem "pg", :group => :production
+gem "sqlite3-ruby", :group => :development
