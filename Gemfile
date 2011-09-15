@@ -31,3 +31,12 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+#Railstutorial StackOverflow fix for db migration issues
+group :production, :staging do
+gem "pg"
+end
+
+group :development, :test do
+gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+end
